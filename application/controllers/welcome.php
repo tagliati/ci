@@ -29,6 +29,26 @@ class Welcome extends CI_Controller {
 		}
 		
 	}
+
+	function salvarAdministradora(){
+        
+        $this->load->library('imagem');
+            
+		$this->load->view('form2');
+        
+        $testeId = $this->input->post('id');
+        
+            //$cadastrarAdministradora->save();
+            
+                   if(isset ($_FILES['logo'])){
+                      print_r($this->imagem->uploadLogo(5));
+                       print_r($_FILES);  exit (0);
+									 }
+
+        
+    }
+
+
 }
 
 /* End of file welcome.php */
