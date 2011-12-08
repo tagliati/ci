@@ -1,7 +1,7 @@
 
 <div id="page-heading"><h1>Cadastrar Fornecedor</h1></div>
 
-
+<form action="<?php echo site_url("fornecedor/salvar");?>" method="post">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
 <tr>
 	<th rowspan="3" class="sized"><img src="<?php echo base_url();?>static/images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
@@ -25,12 +25,17 @@
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 		<tr>
 			<th valign="top">Código:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td>
+				<input type="text" class="inp-form"  name="codigo" value="<?php echo $fornecedor->codigo?>"/>
+				<?php if(isset($fornecedor->id)):?>			
+				<input type="hidden" class="inp-form"  name="id" value="<?php echo $fornecedor->id?>"/>
+				<?php endif;?>
+			</td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">Razão Social:</th>
-			<td><input type="text" class="inp-form-error" /></td>
+			<td><input type="text" class="inp-form-error"  name="razao_social"  name="id" value="<?php echo $fornecedor->razao_social?>"/></td>
 			<td>
 			<div class="error-left"></div>
 			<div class="error-inner">Campo obrigatório.</div>
@@ -38,34 +43,34 @@
 		</tr>
 		<tr>
 			<th valign="top">Endereço:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form"  name="endereco"  name="id" value="<?php echo $fornecedor->endereco?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">Telefone:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form"  name="telefone"  name="id" value="<?php echo $fornecedor->telefone?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">Celular:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form"  name="celular"  name="id" value="<?php echo $fornecedor->celular?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">E-mail:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form"  name="email"  name="id" value="<?php echo $fornecedor->email?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">Comissão(%):</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form"  name="comissao"  name="id" value="<?php echo $fornecedor->comissao?>"/></td>
 			<td></td>
 		</tr>
 	
 	<tr>
 		<th>&nbsp;</th>
 		<td valign="top">
-			<input type="button" value="" class="form-submit" />
+			<input type="submit" value="" class="form-submit" />
 			<input type="reset" value="" class="form-reset"  />
 		</td>
 		<td></td>
@@ -75,9 +80,6 @@
 
 	</td>
 	<td>
-
-	
-
 </td>
 </tr>
 <tr>
@@ -85,7 +87,7 @@
 <td></td>
 </tr>
 </table>
- 
+</form>
 <div class="clear"></div>
  
 

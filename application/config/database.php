@@ -38,7 +38,7 @@
 | the active record class
 */
 
-$active_group = 'online';
+$active_group = 'default';
 $active_record = TRUE;
 
 $db['online']['hostname'] = 'localhost';

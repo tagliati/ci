@@ -274,6 +274,12 @@ $(document).pngFix( );
 <!-- start content -->
 <div id="content">
 
+	<?php $msg =$this->session->flashdata('msg');  ?>
+	<?php if($msg):?>
+		<div class="<?php echo $msg['tipo'];?>"><strong><?php echo $msg['mensagem'];?></strong></div>
+	<?php endif;?>
+
+
 <?php echo $content; ?>
 
 <div class="clear">&nbsp;</div>

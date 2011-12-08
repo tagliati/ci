@@ -1,6 +1,7 @@
 <div id="page-heading"><h1>Cadastrar Cliente</h1></div>
 
 
+<form action="<?php echo site_url("cliente/salvar");?>" method="post">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
 <tr>
 	<th rowspan="3" class="sized"><img src="<?php echo base_url();?>static/images/shared/side_shadowleft.jpg" width="20" height="300" alt="" /></th>
@@ -27,19 +28,19 @@
 			<td>	
 				<select  class="styledselect_form_1">
 					<option value="">Selecione</option>
-					<option value="">Pessoa Física</option>
-					<option value="">Pessoa Jurídica</option>
+					<option value="f" <?php ($cliente->tipo) == "f"?"selected='selected'":""?>>Pessoa Física</option>
+					<option value="j" <?php ($cliente->tipo) == "j"?"selected='selected'":""?>>Pessoa Jurídica</option>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<th valign="top">Razão Social:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form" name="razao_social" value="<?php echo $cliente->razao_social?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">CNPJ:</th>
-			<td><input type="text" class="inp-form-error" /></td>
+			<td><input type="text" class="inp-form-error" name="cnpj" value="<?php echo $cliente->cnpj?>"/></td>
 			<td>
 			<div class="error-left"></div>
 			<div class="error-inner">Campo obrigatório.</div>
@@ -48,22 +49,22 @@
 		
 		<tr>
 			<th valign="top">Endereço:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form" name="endereco"  value="<?php echo $cliente->endereco?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">Telefone:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form" name="telefone" value="<?php echo $cliente->telefone?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">Celular:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form" name="celular" value="<?php echo $cliente->celular?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
 			<th valign="top">E-mail:</th>
-			<td><input type="text" class="inp-form" /></td>
+			<td><input type="text" class="inp-form" name="email" value="<?php echo $cliente->email?>"/></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -81,7 +82,7 @@
 	<tr>
 		<th>&nbsp;</th>
 		<td valign="top">
-			<input type="button" value="" class="form-submit" />
+			<input type="submit" value="" class="form-submit" />
 			<input type="reset" value="" class="form-reset"  />
 		</td>
 		<td></td>
@@ -101,7 +102,7 @@
 <td></td>
 </tr>
 </table>
- 
+</form>
 <div class="clear"></div>
  
 
