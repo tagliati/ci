@@ -42,9 +42,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['online']['hostname'] = 'localhost';
-$db['online']['username'] = 'tagliati';
-$db['online']['password'] = '94nakd8';
-$db['online']['database'] = 'tagliati_popularize';
+$db['online']['username'] = '';
+$db['online']['password'] = '';
+$db['online']['database'] = '';
 $db['online']['dbdriver'] = 'mysql';
 $db['online']['dbprefix'] = '';
 $db['online']['pconnect'] = TRUE;
@@ -60,8 +60,8 @@ $db['online']['stricton'] = FALSE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-$db['default']['database'] = 'tagliati_popularize';
+$db['default']['password'] = '';
+$db['default']['database'] = '';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
